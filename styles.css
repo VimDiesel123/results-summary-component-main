@@ -245,3 +245,11 @@ p {
   padding: 1rem;
   border-radius: 50px;
 }
+
+.button:hover,
+.button:active {
+  background: linear-gradient(
+    var(--color-gradient-primary-start),
+    var(--color-gradient-primary-end)
+  );
+}
