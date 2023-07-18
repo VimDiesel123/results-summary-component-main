@@ -1,0 +1,247 @@
+/* CSS Reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* My CSS */
+
+:root {
+  --color-red-400: hsl(0, 100%, 67%);
+  --color-red-800: hsl(0, 100%, 98%);
+  --color-yellow-400: hsl(39, 100%, 56%);
+  --color-yellow-800: hsl(39, 100%, 98%);
+  --color-green-400: hsl(166, 100%, 37%);
+  --color-green-800: hsl(166, 100%, 98%);
+  --color-blue-400: hsl(234, 85%, 45%);
+  --color-blue-800: hsl(234, 85%, 98%);
+
+  --color-neutral-900: hsl(0, 0%, 100%);
+  --color-text-primary: hsl(221, 100%, 96%);
+  --color-lavander-secondary: hsl(241, 100%, 89%);
+  --color-text-primary-bold: hsl(224, 30%, 27%);
+  --color-text-primary-medium: hsl(227, 7%, 62%);
+
+  --color-gradient-primary-start: hsl(252, 100%, 67%);
+  --color-gradient-primary-end: hsl(241, 81%, 54%);
+
+  --color-gradient-secondary-start: hsla(256, 72%, 46%, 1);
+  --color-gradient-secondary-end: hsla(241, 72%, 46%, 0);
+
+  --font-family-regular: "Hanken Grotesk", sans-seriff;
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+}
+
+body {
+  font-family: var(--font-family-regular);
+  font-weight: var(--font-family-regular);
+  font-size: 18px;
+  color: var(--color-lavander-secondary);
+
+  background-color: var(--color-neutral-900);
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  max-width: 30ch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__header {
+  background: linear-gradient(
+    var(--color-gradient-primary-start),
+    var(--color-gradient-primary-end)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 10% 10%;
+}
+
+.overall_results {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding-top: 1.75rem;
+  background: linear-gradient(
+    var(--color-gradient-secondary-start),
+    var(--color-gradient-secondary-end)
+  );
+}
+
+.overall_results__top {
+  font-weight: var(--font-weight-black);
+  font-size: 56px;
+  color: var(--color-neutral-900);
+  line-height: 1.25;
+}
+
+.overall_results__title {
+  color: var(--color-neutral-900);
+}
+
+.overall_results_description {
+  font-size: 1rem;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2rem;
+}
+
+.summary {
+  color: var(--color-text-primary-bold);
+  font-weight: var(--font-weight-black);
+  font-size: 20px;
+}
+
+.statistics-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.statistics-list__item {
+  background-color: red;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.statistics-list__item__left-side {
+  display: flex;
+  gap: 0.75rem;
+  font-weight: var(--font-weight-regular);
+}
+
+.reaction {
+  color: var(--color-red-400);
+  background-color: var(--color-red-800);
+}
+
+.memory {
+  color: var(--color-yellow-400);
+  background-color: var(--color-yellow-800);
+}
+
+.verbal {
+  color: var(--color-green-400);
+  background-color: var(--color-green-800);
+}
+
+.visual {
+  color: var(--color-blue-400);
+  background-color: var(--color-blue-800);
+}
+
+.statistics-list__item__right-side {
+  color: var(--color-text-primary-medium);
+}
+
+.score {
+  color: var(--color-text-primary-bold);
+}
+
+.button {
+  border-style: none;
+  background-color: var(--color-text-primary-bold);
+  color: var(--color-text-primary);
+  padding: 1rem;
+  border-radius: 50px;
+}
